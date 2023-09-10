@@ -1,0 +1,234 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+html{
+    font-family:"Poppins", sans-serif;
+}
+body {
+    background: linear-gradient(to bottom, 
+        #582b56, 
+        #7f335c, 
+        #b64764, 
+        #fb6d6b, 
+        #ffab6d);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(255, 255, 255, 0.8);  /* You can adjust the background color as needed */
+    text-align: center;
+    
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: rgba(202, 185, 201, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Apply the animation on hover */
+  nav ul li:hover {
+    animation: bounce 0.5s ease; /* Use the bounce animation on hover */
+  }
+
+nav ul li a {
+    text-decoration: none;
+    color: #7f335c; /* Color 2 */
+}
+.Explain{
+    background-color: rgba(202, 185, 201, 0.5);
+    max-width: 50%;
+    margin-left: 25%;
+    margin-right:25%;
+    padding:10px;
+}
+.center {
+    text-align: center;
+}
+
+.center nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.center nav li {
+    display: inline-block;
+}
+
+.center nav a {
+    text-decoration: none;
+    padding: 5px 10px; /* Adjust padding as needed */
+    color: #000; /* Adjust the color as needed */
+    font-size: 30px; /* Increase font size as needed */
+       
+}
+.center img{
+    width: 100%; 
+    max-width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.full-screen-image {
+    width: 100vw; /* Set width to 100% of viewport width */
+    height: 100vh; /* Set height to 100% of viewport height */
+    object-fit: cover; /* Maintain image aspect ratio while covering the container */
+    position: fixed; /* Position the image relative to the viewport */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send the image to the background */
+}
+
+/* Common Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+     align-items: center; 
+}
+
+
+.centerButton{
+    margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+    
+}
+.formContainer{
+    display: none;
+    position:relative;
+    left:5%;
+    right:5%;
+    bottom:10%;
+    
+
+}
+.bigForm{
+    padding-top: 10px;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+}
+.foodCategs{
+    flex-direction: row;
+}
+
+/* Login Page Styles */
+#login {
+    text-align: center;
+    padding: 20px;
+}
+
+#login button {
+    background-color: #582b56; /* Color 1 */
+    color: #582b56; /* Color 1 */
+    padding: 10px 20px;
+    border: none;
+}
+
+/* Menu Items Page Styles */
+#menu-items {
+    text-align: center;
+    padding: 20px;
+}
+
+#menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background-color: #582b56; /* Color 1 */
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow for a card-like effect */
+}
+
+
+
+.delete-button {
+    background-color: #b64764; /* Color 3 */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* Circular Button for Adding */
+.add-button {
+    background-color: #582b56; /* Color 1 */
+    color: #582b56; /* Color 1 */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Center justify all headers */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+/* Add more styles as needed */
+/* .color1 {color: #582b56;}
+.color2 {color: #7f335c;}
+.color3 {color: #b64764;}
+.color4 {color: #fb6d6b;}
+.color5 {color: #ffab6d;} */

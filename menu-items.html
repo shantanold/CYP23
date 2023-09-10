@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="homeStyles.css"> -->
+    <link rel="stylesheet" href="menu-items.css"> 
+    
+    <style>
+        /* Center the list items and their links */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+html{
+    font-family:"Poppins", sans-serif;
+}
+        .center {
+            text-align: center;
+        }
+
+        .center nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .center nav li {
+            display: inline-block;
+        }
+
+        .center nav a {
+            text-decoration: none;
+            padding: 5px 10px; /* Adjust padding as needed */
+            color: #000; /* Adjust the color as needed */
+            font-size: 30px; /* Increase font size as needed */
+        }
+        body {
+    background: linear-gradient(to bottom, 
+        #582b56, 
+        #7f335c, 
+        #b64764, 
+        #fb6d6b, 
+        #ffab6d);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(202, 185, 201, 0.5);  /* You can adjust the background color as needed */
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: rgba(202, 185, 201, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7f335c; /* Color 2 */
+}
+        
+    </style>
+    <title>Vintage Diner</title>
+</head>
+<body>
+    <header class="center">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="apply.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="details.html">Details</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu-items">
+        <h1>Menu Items</h1>
+        <div id="menu-grid">
+            <!-- Menu items will be dynamically generated here -->
+        </div>
+
+        <!-- Button to open the form -->
+        <div class="openBtn">
+            <div class="centerButton">
+                <button id="add-item-button" class="openButton"><strong>Add item</strong></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form for adding new food items -->
+    <div class="bigForm">
+        <form id="myForm" class="formContainer">
+            <h2>Add a new food item</h2>
+            <label for="item_name">
+                <strong>Food Name</strong>
+            </label>
+            <input type="text" id="item_name" placeholder="Put your food name here" name="item_name" autocomplete="off" required >
+
+            <label for="mealCategory">
+                <strong>Meal Category</strong>
+            </label>
+            <select id="mealCategory" name="mealCategory" required>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Dessert</option>
+                <option value="drinks">Drinks</option>
+                <option value="snacks">Snacks</option>
+            </select>
+
+            <label for="foodCats">
+                <strong>Item Characteristics</strong>
+            </label>
+            <div class="foodCategs">
+                <label class="foodCat1 foodCats">
+                    <input type="checkbox" name="characteristics" value="Vegetarian"> Vegetarian
+                </label>
+                <label class="foodCat2 foodCats">
+                    <input type="checkbox" name="characteristics" value="Halal"> Halal
+                </label>
+                <label class="foodCat3 foodCats">
+                    <input type="checkbox" name="characteristics" value="Gluten-Free"> Gluten Free
+                </label>
+                <label class="foodCat4 foodCats">
+                    <input type="checkbox" name="characteristics" value="Meat"> Meat
+                </label>
+                <label class="foodCat5 foodCats">
+                    <input type="checkbox" name="characteristics" value="Vegan"> Vegan
+                </label>
+                <label class="foodCat6 foodCats">
+                    <input type="checkbox" name="characteristics" value="Lactose-Free"> Lactose-Free
+                </label>
+                <label class="foodCat7 foodCats">
+                    <input type="checkbox" name="characteristics" value="Nut-Free"> Nut-Free
+                </label>
+                <label class="foodCat8 foodCats">
+                    <input type="checkbox" name="characteristics" value="Pescatarian"> Pescatarian
+                </label>
+                <label class="foodCat9 foodCats">
+                    <input type="checkbox" name="characteristics" value="Koscher"> Kosher
+                </label>
+                <label class="foodCat10 foodCats">
+                    <input type="checkbox" name="characteristics" value="Low-Carb"> Low-Carb
+                </label>
+            </div>
+
+            <button type="submit" class="btn">Add item!</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <footer>
+        <!-- Footer Content -->
+    </footer>
+
+    
+    <!-- <script src="menu-items.js"></script> -->
+    <script type="module" src="menu-items.js"> 
+    </script>
+</body>
+</html>

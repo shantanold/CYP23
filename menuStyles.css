@@ -1,0 +1,76 @@
+/* Global styles */
+body {
+    background: linear-gradient(to bottom, 
+        #582b56, 
+        #7f335c, 
+        #b64764, 
+        #fb6d6b, 
+        #ffab6d);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+header {
+    background-color: #cab9c9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7f335c; /* Color 2 */
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Apply the animation on hover */
+  nav ul li:hover {
+    animation: bounce 0.5s ease; /* Use the bounce animation on hover */
+  }
+
+/* Menu page-specific styles */
+#menu {
+    text-align: center;
+    padding: 20px;
+}
+
+#menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    background-color: #fff; /* White background for menu items */
+    border: 2px solid #7f335c; /* Borders resembling a paper menu */
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
+    transition: transform 0.2s ease; /* Add a small hover effect */
+}
+
+.menu-item:hover {
+    transform: scale(1.03); /* Slightly scale up on hover for an interactive feel */
+}
+.characteristics{
+    display:flexbox;
+    flex-direction: column;
+}
+/* Center justify all headers */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}

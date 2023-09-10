@@ -1,0 +1,149 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+html{
+    font-family:"Poppins", sans-serif;
+}
+body {
+    
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #582b56; /* Header text color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #7f335c; /* Label text color */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fb6d6b; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffab6d; /* Button background color on hover */
+}
+/* Header and Navigation */
+body {
+    background: linear-gradient(to bottom, 
+        #582b56, 
+        #7f335c, 
+        #b64764, 
+        #fb6d6b, 
+        #ffab6d);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+header {
+    background-color: #cab9c9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Apply the animation on hover */
+  nav ul li:hover {
+    animation: bounce 0.5s ease; /* Use the bounce animation on hover */
+  }
+
+nav ul li a {
+    text-decoration: none;
+    color: #7f335c; /* Color 2 */
+}
+
+#sucessBody{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.successTextBox{
+    width: 300px;
+    padding: 20px;
+    background-color: #ffab6d;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+
+    
+}
+/* Center the list items and their links */
+.center {
+    text-align: center;
+    
+}
+
+
+.center nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.center nav li {
+    display: inline-block;
+}
+
+.center nav a {
+    text-decoration: none;
+    padding: 5px 10px; /* Adjust padding as needed */
+    color: #000; /* Adjust the color as needed */
+    font-size: 30px; /* Increase font size as needed */
+}
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Diner</title>
+    <style>
+        /* Palette */
+        .color1 {color: #582b56;}
+        .color2 {color: #7f335c;}
+        .color3 {color: #b64764;}
+        .color4 {color: #fb6d6b;}
+        .color5 {color: #ffab6d;}
+
+        /* General Styling */
+        body {font-family: Arial, sans-serif;}
+        nav {background-color: #582b56;}
+        nav a {color: white; padding: 10px 20px; text-decoration: none; display: inline-block;}
+        nav a:hover {background-color: #7f335c;}
+
+        /* Menu Filters */
+        select {margin: 10px;}
+
+        /* Apply Page */
+        .rounded-rectangle {
+            border-radius: 15px;
+            border: 1px solid #7f335c;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+        }
+        .add-food-item {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #ffab6d;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#apply">Apply</a>
+        <a href="#contact">Contact</a>
+        <a href="#details">Details</a>
+        <a href="#voting">Voting</a>
+    </nav>
+
+    <!-- Menu Page -->
+    <div id="menu">
+        <h2 class="color1">Menu</h2>
+        <select id="mealFilter">
+            <option value="all">All Meals</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <!-- ... Add other options here ... -->
+        </select>
+        <select id="itemFilter">
+            <option value="all">All Foods</option>
+            <option value="vegetarian">Vegetarian</option>
+            <!-- ... Add other options here ... -->
+        </select>
+
+        <!-- Sample menu items (you'd populate this dynamically based on filters) -->
+        <div class="menu-item">Egg Sandwich - Breakfast - Vegetarian</div>
+        <!-- ... -->
+    </div>
+
+    <!-- Apply Page -->
+    <div id="apply">
+        <h2 class="color2">Apply</h2>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Menu items grid -->
+        <div id="businessMenu">
+            <div class="rounded-rectangle">
+                Food Title<br>
+                Category<br>
+                Details<br>
+                🗑️
+            </div>
+            <!-- ... Add more items ... -->
+            <div class="add-food-item">+</div>
+        </div>
+    </div>
+
+    <!-- ... Add content for other pages ... -->
+
+    <script>
+        // JavaScript to handle filter changes and other interactive features.
+    </script>
+</body>
+</html>

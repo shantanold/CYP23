@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menuStyles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+html{
+    font-family:"Poppins", sans-serif;
+}
+.center img{
+    width: 100%; 
+    max-width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.full-screen-image {
+    width: 100vw; /* Set width to 100% of viewport width */
+    height: 100vh; /* Set height to 100% of viewport height */
+    object-fit: cover; /* Maintain image aspect ratio while covering the container */
+    position: fixed; /* Position the image relative to the viewport */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send the image to the background */
+}
+       /* Center the list items and their links */
+       .center {
+            text-align: center;
+        }
+
+        .center nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .center nav li {
+            display: inline-block;
+        }
+
+        .center nav a {
+            text-decoration: none;
+            padding: 5px 10px; /* Adjust padding as needed */
+            color: #000; /* Adjust the color as needed */
+            font-size: 30px; /* Increase font size as needed */
+        }
+
+        /* Global styles */
+        body {
+            background: linear-gradient(to bottom, 
+                #582b56, 
+                #7f335c, 
+                #b64764, 
+                #fb6d6b, 
+                #ffab6d);
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 100% of the viewport height */
+            margin: 0;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: rgba(202, 185, 201, 0.5); /* You can adjust the background color as needed */
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        header {
+            background-color: rgba(202, 185, 201, 0.5);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #7f335c; /* Color 2 */
+        }
+
+        /* Style for contact section */
+        #contact {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Style for text boxes */
+        .text-box {
+            background-color: rgba(255, 255, 255, 0.2); /* Adjust background color and opacity */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .text-box a {
+            color: white; /* Adjust link color */
+        }
+
+    </style>
+    <title>Vintage Diner</title>
+</head>
+<body>
+    <header class = "center">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="apply.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="details.html">Details</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <!-- Each element within its own text box -->
+        <div class="text-box">
+            <a href="https://www.google.com/search?q=tamu+commons+contact+information&sca_esv=564043545&rlz=1C1UEAD_enUS1022US1022&ei=auf8ZOH1DMmtqtsPtvaQkAs&oq=tamu+commons+contact+infu&gs_lp=Egxnd3Mtd2l6LXNlcnAaAhgCIhl0YW11IGNvbW1vbnMgY29udGFjdCBpbmZ1KgIIADIHECEYoAEYCjIHECEYoAEYCjIHECEYoAEYCjIFECEYnwVIrSlQ1QNYyB5wAngCkAEAmAF0oAH-DaoBBDE0LjW4AQPIAQD4AQHCAgQQABhHwgIGEAAYFhgewgIIEAAYigUYhgPCAgUQIRigAcICCBAhGJ8FGIsDwgICECbCAgsQLhivARjHARiABMICBRAAGIAEwgILEC4YgAQYxwEYrwHCAhoQLhivARjHARiABBiXBRjcBBjeBBjgBNgBAcICDhAuGIoFGMcBGK8BGJECwgIdEC4YigUYxwEYrwEYkQIYlwUY3AQY3gQY4ATYAQHCAgUQIRirAsICCBAhGKsCGIsD4gMEGAAgQYgGAZAGCLoGBggBEAEYFA&sclient=gws-wiz-serp#">Commons Phone Number</a>
+        </div>
+        <div class="text-box">
+            <a href="https://imgur.com/Qd4lo7G">Greasy Grove</a>
+        </div>
+        <div class="text-box">
+            <a href="https://www.linkedin.com/in/shantanuraghavan">Shantanu Raghavan</a>
+        </div>
+        <div class="text-box">
+            <a href="https://www.linkedin.com/in/jacob-kuruvilla-248a60239">Jacob Kuruvilla</a>
+        </div>
+        <div class="text-box">
+            <a href="https://www.linkedin.com/in/jacob-joseph-937409245/">Jacob Joseph</a>
+        </div>
+        <div class="text-box">
+            <a href="https://www.linkedin.com/in/sulaiman-mulla-b9416021b/">Sulaiman Mulla</a>
+        </div>
+    </section>
+
+    <div>
+        <img src='./fotor-ai-2023090916852_16x9_1.png' alt="Full Screen Image" class="full-screen-image">       
+    </div> 
+    <footer>
+        <p>&copy; 2023 Commons Yummification Project</p>
+    </footer>
+
+    <script src="apply.js"></script>
+</body>
+</html>

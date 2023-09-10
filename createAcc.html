@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = 'stylesheet' href="creation.css">
+    <title>Vintage Diner</title>
+</head>
+<body>
+    <header class = "center">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="apply.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="details.html">Details</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Create a New Account</h1>
+        <form id='registrationForm' action="regSuccess.html" method="POST">
+            <div class="form-group">
+                <label for="restaurantName">Restaurant Name</label>
+                <input type="text" id="restaurantName" name="restaurantName" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Redirect to regSuccess.html
+            window.location.href = 'regSuccess.html';
+        });
+
+</script>
+</body>
+
+</html>

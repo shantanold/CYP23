@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="menuStyles.css"> -->
+    
+    <style>
+                
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+html{
+    font-family:"Poppins",sans-serif;
+    font-size: smaller;
+}
+        /* Global styles */
+        /* Global styles */
+body {
+    background: linear-gradient(to bottom, 
+        #582b56, 
+        #7f335c, 
+        #b64764, 
+        #fb6d6b, 
+        #ffab6d);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(202, 185, 201, 0.5);  /* You can adjust the background color as needed */
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: rgba(202, 185, 201, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7f335c; /* Color 2 */
+}
+
+
+        /* Menu page-specific styles */
+        #filters {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .filter-container {
+            background-color: #d35f5d; /* Background color for the container */
+            border-radius: 15px; /* Rounded corners */
+            padding: 10px; /* Add padding for spacing */
+            margin: 10px; /* Add margin for spacing */
+            display: inline-block; /* Display containers inline */
+        }
+
+        .filter-container select {
+            padding: 10px; /* Add padding inside the dropdown */
+            font-size: 20px; /* Increase font size for the dropdown options */
+            border: none; /* Remove border for the dropdown */
+            background-color: transparent; /* Make dropdown background transparent */
+        }
+
+        /* Updated styles for the menu page-specific section */
+        #physical-menu {
+            text-align: center;
+            padding: 20px;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent menu items from wrapping to a new line */
+        }
+
+        #menu-container {
+            display: inline-block; /* Display menu items in a row */
+        }
+
+        .menu-item:nth-child(5n+1) {
+            background-color: #582b56; /* Color 1 */
+        }
+
+        .menu-item:nth-child(5n+2) {
+            background-color: #7f335c; /* Color 2 */
+        }
+
+        .menu-item:nth-child(5n+3) {
+            background-color: #b64764; /* Color 3 */
+        }
+
+        .menu-item:nth-child(5n+4) {
+            background-color: #fb6d6b; /* Color 4 */
+        }
+
+        .menu-item:nth-child(5n+5) {
+            background-color: #ffab6d; /* Color 5 */
+        }
+        .menu-item {
+            display: inline-block; /* Display items in a row */
+            width: 200px; /* Set a fixed width for each item */
+            margin: 15px; /* Add margin between items */
+            border: 2px solid #7f335c; /* Borders resembling a paper menu */
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Add a slight shadow for depth */
+            transition: transform 0.2s ease; /* Add a small hover effect */
+            padding: 10px; /* Add padding to create space for text */
+            text-align: left; /* Align text to the left within the rectangles */
+        }
+        @keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Apply the animation on hover */
+nav ul li:hover {
+  animation: bounce 0.5s ease; /* Use the bounce animation on hover */
+}
+        /* Updated styles for item names within menu items */
+        .menu-item p.name {
+            font-weight: bold; /* Make the item name bold */
+            font-size: 15px; /* Increase the font size */
+            margin: 0; /* Remove margin to prevent extra spacing */
+        }
+
+        /* Updated styles for item characteristics within menu items */
+        .menu-item p.characteristics {
+            margin-top: 10px; /* Add margin to separate characteristics from the item name */
+            font-size: 14px; /* Decrease the font size */
+        }
+
+        /* Add a scrollbar for the horizontal scrolling container */
+        #physical-menu::-webkit-scrollbar {
+            height: 10px;
+            background-color: #cab9c9;
+        }
+
+        #physical-menu::-webkit-scrollbar-thumb {
+            background-color: #7f335c; /* Color 2 */
+            border-radius: 10px;
+        }
+        .center {
+            text-align: center;
+        }
+
+        .center nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .center nav li {
+            display: inline-block;
+        }
+
+        .center nav a {
+            text-decoration: none;
+            padding: 5px 10px; /* Adjust padding as needed */
+            color: #000; /* Adjust the color as needed */
+            font-size: 30px; /* Increase font size as needed */
+               
+        }
+
+    </style>
+    <title>Menu - Local Businesses</title>
+</head>
+<body>
+    <header class = "center">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="apply.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="details.html">Details</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container for dropdown filters -->
+    <section id="filters">
+        <div class="filter-container">
+            <select id="meal-filter">
+                <option value="all">All Meals</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Desserts</option>
+                <option value="snacks">Snacks</option>
+                <option value="drinks">Drinks</option>
+            </select>
+
+            <select id="item-filter">
+                <option value="all">All Foods</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Gluten-Free">Gluten-Free</option>
+                <option value="Halal">Halal</option>
+                <option value="Meat">Meat</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Lactose-Free">Lactose-Free</option>
+                <option value="Nut-Free">Nut-Free</option>
+                <option value="Pescatarian">Pescatarian</option>
+                <option value="Kosher">Kosher</option>
+                <option value="Low-Carb">Low-Carb</option>
+            </select>
+    </section>
+
+    <!-- Container for physical menu items -->
+    <section id="physical-menu">
+        <h2>Food items</h2>
+        <div id="menu-container">
+            <!-- Menu items will be dynamically generated here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Local Businesses Menu</p>
+    </footer>
+
+    <script type="module">
+        // Sample menu data from local businesses
+import menuItemsData from './menu-items.js';
+console.log(menuItemsData)
+let menuItems = menuItemsData;
+console.log(menuItemsData);
+function createMenuItem(item) {
+    console.log(item);
+    const menuItem = document.createElement("div");
+    menuItem.classList.add("menu-item");
+
+    const itemName = document.createElement("p");
+    const itemComp =document.createElement("p");
+    itemComp.classList.add("mealy");
+    itemComp.textContent="From: Greasy Grove";
+    itemName.classList.add("name");
+    itemName.textContent = item.title;
+    const itemMeal =document.createElement("p");
+    itemMeal.classList.add("mealy");
+    itemMeal.textContent=item.category;
+
+
+    const itemCharacteristics = document.createElement("p");
+    itemCharacteristics.classList.add("characteristics");
+    itemCharacteristics.textContent= item.characteristics;
+    itemCharacteristics.style.overflow="hidden";
+    itemCharacteristics.style.whiteSpace="wrap"
+
+    // Loop through characteristics and create a separate line for each
+    // if(Array.isArray(item.characteristics)){
+    //     const itemChars = item.characteristics;
+    //     itemChars.forEach(characteristic => {
+    //     const characteristicLine = document.createElement("span");
+    //     characteristicLine.textContent = characteristic;
+    //     itemCharacteristics.appendChild(characteristicLine);
+    //     itemCharacteristics.appendChild(document.createElement("br")); // Add line break
+    // });
+    // }
+    
+    
+    
+    
+    menuItem.appendChild(itemName);
+    menuItem.appendChild(itemComp);
+    menuItem.appendChild(itemMeal);
+    menuItem.appendChild(itemCharacteristics);
+    return menuItem;
+}
+
+// Function to populate the physical menu with all menu items
+function populatePhysicalMenu() {
+    const menuContainer = document.getElementById("menu-container");
+    menuContainer.innerHTML = "";
+    
+    menuItems.forEach(item => {
+        
+        const menuItem = createMenuItem(item);
+        menuContainer.appendChild(menuItem);
+    });
+}
+
+// Function to filter and update the physical menu based on selected filters
+function filterAndPopulatePhysicalMenu() {
+    const mealFilter = document.getElementById("meal-filter").value;
+    const itemFilter = document.getElementById("item-filter").value;
+    
+    const filteredItems = menuItems.filter(item => {
+        let chars =item.characteristics.split(", ")
+        
+        console.log(mealFilter)
+        console.log(item.category);
+        if (mealFilter !== "all" && item.category !== mealFilter) {
+            return false;
+        }
+
+        if (itemFilter !== "all" && !chars.includes(itemFilter)) {
+            return false;
+        }
+
+        return true;
+    });
+
+    const menuContainer = document.getElementById("menu-container");
+    menuContainer.innerHTML = "";
+
+    filteredItems.forEach(item => {
+        const menuItem = createMenuItem(item);
+        menuContainer.appendChild(menuItem);
+    });
+}
+
+// Event listeners for filter changes
+document.getElementById("meal-filter").addEventListener("change", filterAndPopulatePhysicalMenu);
+document.getElementById("item-filter").addEventListener("change", filterAndPopulatePhysicalMenu);
+
+// Initial menu rendering (show all items)
+populatePhysicalMenu();
+
+    </script>
+</body>
+</html>

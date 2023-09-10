@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeStyles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8I10hggktVGvB6qX6CJF3KMuBibjF8Aw&callback=initMap" async defer></script>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .center nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .center nav li {
+            display: inline-block;
+        }
+
+        .center nav a {
+            text-decoration: none;
+            padding: 5px 10px; /* Adjust padding as needed */
+            color: #000; /* Adjust the color as needed */
+            font-size: 30px; /* Increase font size as needed */
+        }
+    </style>
+</head>
+<body>
+    <header class = "center">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="apply.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="details.html">Details</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Host Details and Dining Hall Hours</h1>
+        <p>
+            Service options: Dine-in · No delivery<br>
+            Located in: The Commons<br>
+            Address: 676 Lubbock St, College Station, TX 77843<br>
+            Phone: (979) 845-3211<br>
+            Hours: <br>
+            <br>
+            Saturday: 10 AM – 2 PM, 5 – 8 PM <br>
+            Sunday: 10 AM – 2 PM, 5 – 8 PM <br>
+            Monday: 7 AM – 2:30 PM, 5 – 9 PM <br>
+            Tuesday: 7 AM – 2:30 PM, 5 – 9 PM <br>
+            Wednesday: 7 AM – 2:30 PM, 5 – 9 PM<br>
+            Thursday: 7 AM – 2:30 PM, 5 – 9 PM<br>
+            Friday: 7 AM – 2:30 PM, 5 – 8 PM<br>
+            
+        </p>
+    
+        <!-- Add a map container -->
+        <div id="map"></div>
+    </div>
+    
+    <script>
+        // Initialize the Google Map
+        function initMap() {
+            // Define the new location coordinates (latitude and longitude)
+            var location = { lat: 30.615698, lng: -96.336327 }; // Coordinates for 676 Lubbock St, College Station, TX 77843
+
+            // Create a new map centered at the defined location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15, // Adjust the zoom level as needed
+                center: location
+            });
+
+            // Create a marker on the map
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: '676 Lubbock St, College Station, TX 77843' // Replace with your desired title
+            });
+        }
+    </script>
+</body>
+</html>

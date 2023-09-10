@@ -1,0 +1,93 @@
+/* Global Styles */
+
+/* Header and Navigation */
+header {
+    background-color: #cab9c9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7f335c; /* Color 2 */
+}
+
+/* Common Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+}
+
+/* Login Page Styles */
+#login {
+    text-align: center;
+    padding: 20px;
+}
+
+#login button {
+    background-color: #582b56; /* Color 1 */
+    color: #582b56; /* Color 1 */
+    padding: 10px 20px;
+    border: none;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Apply the animation on hover */
+  nav ul li:hover {
+    animation: bounce 0.5s ease; /* Use the bounce animation on hover */
+  }
+
+/* Circular Button for Adding */
+.add-button {
+    background-color: #582b56; /* Color 1 */
+    color: #582b56; /* Color 1 */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Add more styles as needed */
+/* .color1 {color: #582b56;}
+.color2 {color: #7f335c;}
+.color3 {color: #b64764;}
+.color4 {color: #fb6d6b;}
+.color5 {color: #ffab6d;} */
